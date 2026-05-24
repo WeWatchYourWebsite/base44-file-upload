@@ -1,0 +1,41 @@
+{
+  "name": "SharedFile",
+  "type": "object",
+  "properties": {
+    "file_name": {
+      "type": "string",
+      "description": "Original name of the uploaded file"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the stored file"
+    },
+    "file_type": {
+      "type": "string",
+      "description": "MIME type of the file"
+    },
+    "file_size": {
+      "type": "number",
+      "description": "Size of the file in bytes"
+    },
+    "share_id": {
+      "type": "string",
+      "description": "Unique ID for public sharing link"
+    },
+    "expiry_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional expiry date for the share link"
+    },
+    "download_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times the file has been downloaded"
+    }
+  },
+  "required": [
+    "file_name",
+    "file_url",
+    "share_id"
+  ]
+}
